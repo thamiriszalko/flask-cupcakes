@@ -61,11 +61,9 @@ def create():
         rating=rating,
         image=image,
     )
-    print('thamirissss', flavor, size, rating, image)
-    print(instance, 'eueu')
+
     db.session.add(instance)
     db.session.commit()
-    print('eudenovo')
 
     return jsonify(cupcake=serialize(instance))
 
